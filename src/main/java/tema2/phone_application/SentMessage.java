@@ -11,11 +11,10 @@ public class SentMessage {
     public void addMessageToList(String message) {
         sentMessagesList.add(message);
     }
+
     public void addPhoneNumberToList(String phoneNumber) {
         phoneNumberList.add(phoneNumber);
     }
-
-
 
 
 }

@@ -5,8 +5,7 @@ import tema1.model.Book;
 import tema1.model.Novel;
 
 public class LibraryCatalog {
-    public static void main(String... args){
-
+    public static void main(String... args) {
 
 
         Book firstBook = new Book(100, "nimic");

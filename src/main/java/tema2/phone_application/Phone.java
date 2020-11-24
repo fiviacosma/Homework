@@ -10,7 +10,6 @@ public class Phone implements PhoneBehavior {
     List<String> callList = new ArrayList<>();
 
 
-
     public void addContact(int nrCrt, String phoneNumber, String firstName, String lastName) {
 
         contactList.addNrCrtToList(nrCrt);
@@ -22,10 +21,10 @@ public class Phone implements PhoneBehavior {
 
     public void listContacts() {
 
-        for (int i=0; i<=contactList.nrCrtList.size()-1; i++){
-            System.out.print(contactList.nrCrtList.get(i).toString()+" ");
-            System.out.print(contactList.phoneNumberList.get(i).toString()+" ");
-            System.out.print(contactList.firstNameList.get(i).toString()+" ");
+        for (int i = 0; i <= contactList.nrCrtList.size() - 1; i++) {
+            System.out.print(contactList.nrCrtList.get(i).toString() + " ");
+            System.out.print(contactList.phoneNumberList.get(i).toString() + " ");
+            System.out.print(contactList.firstNameList.get(i).toString() + " ");
             System.out.println(contactList.lastNameList.get(i).toString());
         }
 
@@ -33,7 +32,7 @@ public class Phone implements PhoneBehavior {
     }
 
     public void sendMessage(String phoneNumber, String messageContent) {
-        if (messageContent.length()>500){
+        if (messageContent.length() > 500) {
             System.out.println("Message is too long, please use max 500 charcters".toString());
 
         } else {
@@ -48,7 +47,7 @@ public class Phone implements PhoneBehavior {
     public void listMessages(String phoneNumber) {
 
         System.out.println("Messages sent to " + phoneNumber + " dssare:");
-        for (int i=0; i <= messageArchive.phoneNumberList.size() - 1; i++) {
+        for (int i = 0; i <= messageArchive.phoneNumberList.size() - 1; i++) {
 
             if (messageArchive.phoneNumberList.get(i) == phoneNumber) {
                 System.out.println(messageArchive.sentMessagesList.get(i).toString());
@@ -62,9 +61,10 @@ public class Phone implements PhoneBehavior {
 
     }
 
+
     public void seeAllCallsHistory() {
 
-        for (int i=0; i<= callList.size()-1;i++){
+        for (int i = 0; i <= callList.size() - 1; i++) {
             System.out.println(callList.get(i));
         }
 
@@ -73,7 +73,7 @@ public class Phone implements PhoneBehavior {
 
     public String getContactPhoneNumber(int position) {
 
-        return contactList.phoneNumberList.get(position-1);
+        return contactList.phoneNumberList.get(position - 1);
 
     }
 }
